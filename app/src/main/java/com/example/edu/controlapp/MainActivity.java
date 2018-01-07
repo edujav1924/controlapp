@@ -15,7 +15,7 @@ import static java.lang.Thread.sleep;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     ImageButton btnencd,volmas,volmenos,chmas,chmenos,btn_salir,btn_audio,btn_info,btn_canales,btn_derecha,btn_izquierda,btn_abajo,btn_arriba,btn_silencio;
-    Button btn_ok,btn_1,btn_2,btn_3,btn_4,btn_5,btn_6,btn_7,btn_8,btn_9,btn_0;
+    Button btn_ok,btn_1,btn_2,btn_3,btn_4,btn_5,btn_6,btn_7,btn_8,btn_9,btn_0,btn_blue;
     private int [] trasmit_info,trasmiton_off,trasmitvol_mas,trasmitvol_menos,trasmitcanal_mas,trasmit_canal_menos,trasmit_silencio,trasmit_ok,trasmit_arriba,trasmit_derecha,trasmit_izquierda,trasmit_abajo;
     private int carrier = 38028;
     Spinner selectorequipo;
@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int id_dispositivo;
     private int[] trasmit_canales,trasmit_audio,trasmit_salir;
     private  int [] trasmit_1,trasmit_2,trasmit_3,trasmit_4,trasmit_5,trasmit_6,trasmit_7,trasmit_8,trasmit_9,trasmit_0;
+    private int[] trasmit_blue_button;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_7 = findViewById(R.id.b7);
         btn_8 = findViewById(R.id.b8);
         btn_9 = findViewById(R.id.b9);
+        btn_blue = findViewById(R.id.red_button);
         btnencd.setOnClickListener(this);
         volmas.setOnClickListener(this);
         volmenos.setOnClickListener(this);
@@ -79,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_7.setOnClickListener(this);
         btn_8.setOnClickListener(this);
         btn_9.setOnClickListener(this);
-
+        btn_blue.setOnClickListener(this);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.dispositivos,R.layout.support_simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
@@ -177,6 +181,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.b9:
                 cod_trasmitt(trasmit_9);
                 break;
+            case R.id.red_button:
+                cod_trasmitt(trasmit_blue_button);
         }
     }
     private void cod_trasmitt(int [] patern_trasmit){
@@ -210,6 +216,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int [] claro_8 = {9000,4350,600,500,600,500,600,500,600,450,600,500,600,550,550,500,600,1650,550,500,600,550,550,500,600,500,600,500,600,500,600,500,600,1600,600,1650,550,500,600,1600,600,550,550,1600,650,500,600,450,600,550,550,500,600,1650,550,500,600,1650,600,500,600,1600,600,1600,600,1600,600,};
         int [] claro_9 = {9000,4350,600,500,600,500,550,550,550,550,550,500,600,500,600,500,600,1600,600,500,600,500,600,500,600,500,600,500,600,500,600,450,600,1650,600,1600,600,500,600,1600,600,1650,550,1650,600,500,600,450,600,550,550,550,550,1650,600,450,600,500,600,500,600,1600,600,1650,600,1600,600,};
         int [] claro_0 = {8900,4450,600,500,600,450,600,500,600,500,600,500,600,500,650,400,650,1600,650,450,600,450,650,450,650,500,600,500,550,550,600,450,650,1600,550,550,550,1650,600,1600,600,1650,600,1600,550,550,550,550,550,500,650,1550,650,500,550,550,550,500,600,500,600,1650,600,1600,600,1600,600,};
+        int [] claro_blue = {9000,4400,600,500,600,500,600,500,600,500,600,500,600,500,600,450,650,1600,550,550,550,500,650,450,650,450,650,450,600,500,600,500,600,1600,600,500,600,500,650,1550,600,500,600,1650,550,500,600,1600,600,550,550,1650,600,1600,600,500,600,1600,600,500,600,1600,600,500,600,1650,600,};
 
 
         switch (id_dispositivo){
@@ -240,7 +247,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 trasmit_8 = claro_8;
                 trasmit_9 = claro_9;
                 trasmit_0 = claro_0;
-
+                trasmit_blue_button = claro_blue;
                 break;
 
         }

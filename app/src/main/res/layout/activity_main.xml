@@ -10,6 +10,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,16 +25,39 @@
             <Spinner
                 android:id="@+id/spinnerequipos"
                 android:layout_width="match_parent"
-                android:layout_height="40dp" />
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@+id/encendido"
+                android:background="@drawable/selectorshape"
+                android:dropDownWidth="match_parent" />
 
-            <ImageButton
-                android:id="@+id/encendido"
-                android:layout_width="45dp"
-                android:layout_height="46dp"
-                android:background="@drawable/forma_encendido"
-                android:scaleType="centerCrop"
-                android:scaleX="1"
-                android:scaleY="1.356" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <ImageButton
+                    android:id="@+id/encendido"
+                    android:layout_width="45dp"
+                    android:layout_height="46dp"
+                    android:layout_alignTop="@+id/red_button"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/forma_encendido"
+                    android:scaleType="centerCrop"
+                    android:scaleX="1"
+                    android:scaleY="1.356" />
+
+                <Button
+                    android:id="@+id/red_button"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="41dp"
+                    android:background="?android:attr/colorPrimaryDark" />
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -45,8 +69,8 @@
                     android:layout_width="46dp"
                     android:layout_height="46dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/chmas"
-                    android:layout_marginStart="36dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="34dp"
                     android:background="@drawable/formas"
                     android:scaleType="centerCrop"
                     android:scaleX="1"
@@ -89,9 +113,10 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="40dp"
-                    android:background="@drawable/selectorchmenos"
+                    android:background="@drawable/selectorshape"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+                    app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />"
+                />
 
                 <ImageButton
                     android:id="@+id/vmenos"
@@ -139,7 +164,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="27dp"
                     android:layout_toStartOf="@+id/ok"
-                    android:background="@drawable/selectorchmenos"
+                    android:background="@drawable/selectorshape"
                     app:srcCompat="@drawable/ic_arrow_left" />
 
                 <ImageButton
@@ -149,7 +174,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="7dp"
-                    android:background="@drawable/selectorchmenos"
+                    android:background="@drawable/selectorshape"
                     app:srcCompat="@drawable/ic_arrow_down" />
 
                 <ImageButton
@@ -159,7 +184,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="27dp"
                     android:layout_toStartOf="@+id/subtiulos"
-                    android:background="@drawable/selectorchmenos"
+                    android:background="@drawable/selectorshape"
                     app:srcCompat="@drawable/ic_arrow_right" />
 
                 <Button
@@ -168,7 +193,7 @@
                     android:layout_height="45dp"
                     android:layout_alignStart="@+id/abajo"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/selectorchmenos"
+                    android:background="@drawable/selectorshape"
                     android:text="OK"
                     android:textSize="18sp" />
 
@@ -219,14 +244,15 @@
 
                 <Button
                     android:id="@+id/b1"
-                    style="@android:style/Widget.Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="29dp"
+                    android:background="@drawable/customselector"
                     android:fontFamily="sans-serif"
                     android:text="1"
+                    android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
                 <Button
@@ -236,8 +262,10 @@
                     android:layout_height="50dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:background="@drawable/customselector"
                     android:fontFamily="sans-serif"
                     android:text="2"
+                    android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
                 <Button
@@ -248,8 +276,10 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="40dp"
+                    android:background="@drawable/customselector"
                     android:fontFamily="sans-serif"
                     android:text="3"
+                    android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
             </RelativeLayout>
@@ -267,8 +297,10 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="28dp"
+                    android:background="@drawable/customselector"
                     android:fontFamily="sans-serif"
                     android:text="4"
+                    android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
                 <Button
@@ -278,8 +310,10 @@
                     android:layout_height="50dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:background="@drawable/customselector"
                     android:fontFamily="sans-serif"
                     android:text="5"
+                    android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
                 <Button
@@ -290,8 +324,10 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="39dp"
+                    android:background="@drawable/customselector"
                     android:fontFamily="sans-serif"
                     android:text="6"
+                    android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
             </RelativeLayout>
@@ -309,8 +345,10 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="29dp"
+                    android:background="@drawable/customselector"
                     android:fontFamily="sans-serif"
                     android:text="@string/_7"
+                    android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
                 <Button
@@ -321,8 +359,10 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="39dp"
+                    android:background="@drawable/customselector"
                     android:fontFamily="sans-serif"
                     android:text="@string/_9"
+                    android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
                 <Button
@@ -332,8 +372,10 @@
                     android:layout_height="50dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:background="@drawable/customselector"
                     android:fontFamily="sans-serif"
                     android:text="@string/_8"
+                    android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
             </RelativeLayout>
@@ -361,8 +403,10 @@
                     android:layout_height="50dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:background="@drawable/customselector"
                     android:fontFamily="sans-serif"
                     android:text="0"
+                    android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
                 <ImageButton
