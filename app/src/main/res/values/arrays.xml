@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dispositivos">
+        <item name="claro_tv">Claro Tv</item>
+        <item name="Samsung_Tv">Sansung TV</item>
+        <item name="Haustex">Haustec_AA</item>
+    </string-array>
+</resources>
