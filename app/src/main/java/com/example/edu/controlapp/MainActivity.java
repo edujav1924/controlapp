@@ -1,9 +1,13 @@
 package com.example.edu.controlapp;
 
+import android.content.DialogInterface;
 import android.hardware.ConsumerIrManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -25,6 +29,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private  int [] trasmit_1,trasmit_2,trasmit_3,trasmit_4,trasmit_5,trasmit_6,trasmit_7,trasmit_8,trasmit_9,trasmit_0;
     private int[] trasmit_blue_button;
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.actionmenu, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -251,5 +261,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
         }
+
+    }
+
+
+    public void onComposeAction(MenuItem item) {
+        Log.i("actionbar","holaaa");
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setPositiveButton("cerrar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                dialog.cancel();
+            }
+        });
+
+        builder.setMessage(("Eduardo Gonzalez\n2018\nVersion:0.0.1"))
+                .setTitle(("Propiedades"));
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
     }
 }
