@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:state_pressed="true">
+    <item android:state_pressed="true" >
         <shape >
             <corners android:radius="5dp"/>
             <stroke
                 android:width="3dp"
-                android:color="#f40a0a"
+                android:color="#fff200"
                 android:dashWidth="8dp"
                 android:dashGap="0dp" />
-            <solid android:color="#ffffff" />
+            <solid android:color="#000000" />
         </shape>
+
     </item>
     <item android:state_pressed="false">
         <shape>
             <corners android:radius="5dp"/>
             <stroke
                 android:width="3dp"
-                android:color="#000000"
+                android:color="#ffff"
                 android:dashWidth="5dp"
                 android:dashGap="0dp" />
-            <solid android:color="#ffffff" />
+            <solid android:color="#000000" />
         </shape>
     </item>
 </selector>

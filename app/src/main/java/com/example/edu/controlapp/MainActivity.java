@@ -14,8 +14,8 @@ import android.widget.Spinner;
 import static java.lang.Thread.sleep;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    ImageButton btnencd,volmas,volmenos,chmas,chmenos,btn_salir,btn_audio,btn_info,btn_canales,btn_derecha,btn_izquierda,btn_abajo,btn_arriba,btn_silencio;
-    Button btn_ok,btn_1,btn_2,btn_3,btn_4,btn_5,btn_6,btn_7,btn_8,btn_9,btn_0,btn_blue;
+    ImageButton btnencd,chmas,chmenos,btn_salir,btn_audio,btn_info,btn_canales,btn_derecha,btn_izquierda,btn_abajo,btn_arriba,btn_silencio;
+    Button btn_ok,btn_1,btn_2,btn_3,btn_4,btn_5,btn_6,btn_7,btn_8,btn_9,btn_0,btn_blue,volmas,volmenos;
     private int [] trasmit_info,trasmiton_off,trasmitvol_mas,trasmitvol_menos,trasmitcanal_mas,trasmit_canal_menos,trasmit_silencio,trasmit_ok,trasmit_arriba,trasmit_derecha,trasmit_izquierda,trasmit_abajo;
     private int carrier = 38028;
     Spinner selectorequipo;
